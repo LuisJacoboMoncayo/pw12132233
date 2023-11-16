@@ -28,6 +28,27 @@ app.get("/", function(req, res){
 //app.post();
 //app.put();
 //app.delete();
+//Mostrar todos los maestros
+app.get('/api/maestros', (req, res)=>{
+    conexion.query("SELECT * FROM maestros", (error, filas)=>{
+        if(error){
+            throw error;
+        }else{
+            res.send(filas);
+        }
+    });
+});
+
+//Mostrar a un solo maestro
+app.get('/api/maestros/:id', (req, res)=>{
+    conexion.query("SELECT * FROM maestros WHERE clave = ? LIMIT 1", [req.params.id], (error, fila)=>{
+        if(error){
+            throw error;
+        }else{
+            res.send(fila);
+        }
+    });
+});
 
 //Encende el servidor
 app.listen("3000", function(){
