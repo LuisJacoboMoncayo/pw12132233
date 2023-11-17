@@ -4,10 +4,16 @@
   "description": "API Sistema de Maestros",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1", "start": "node app.js",
-    "dev":"nodemon app.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
-  "keywords": ["API", "Maestros", "PW", "1213"],
+  "keywords": [
+    "API",
+    "Maestros",
+    "PW",
+    "1213"
+  ],
   "author": "Luis Fernando Jacobo Moncayo",
   "license": "ISC",
   "dependencies": {
